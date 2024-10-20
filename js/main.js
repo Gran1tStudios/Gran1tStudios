@@ -18,6 +18,8 @@ const energy_max = 1000;
 const canister_max = 3;
 const lvl_tap_max = 6;
 
+let score_interval;
+
 function update_Score_Display() {
     score.textContent = `${score_now}`;
 }
