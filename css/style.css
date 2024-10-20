@@ -31,8 +31,10 @@ html,body {
 }
 a {
 	text-decoration:none;
-  }
-
+}
+img {
+	pointer-events: none;
+}
 .mobile {
 	height: 100%;
 	box-sizing: border-box;
@@ -130,6 +132,8 @@ footer .footer_buttons .btn_tasks.active {
 	display: flex;
   	align-items: end;
   	justify-content: center;
+	  position: relative;
+	  z-index: 260;
 }
 .coin {
 	width: 100%;
@@ -151,8 +155,9 @@ footer .footer_buttons .btn_tasks.active {
 	max-width: 430px;
 	max-height: 430px;
 	border: none;
-	background-color: none;
 	border-radius: 50%;
+	position: relative;
+	z-index: 200;
 }
 .coin .coin_touch {
 	display: block;
@@ -164,8 +169,8 @@ footer .footer_buttons .btn_tasks.active {
 	max-height: 430px;
 	border: none;
 	border-radius: 50%;
-	background: none;
 	position: absolute;
+	z-index: 250;
 }
 
 
@@ -180,6 +185,7 @@ footer .footer_buttons .btn_tasks.active {
 	right: 0;
   	left: 0;
 	margin: 0 auto;
+	z-index: 260;
 }
 .mine_buttons {
 	width: 100%;
