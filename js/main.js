@@ -31,14 +31,7 @@ function update_Energy_Display() {
 function update_Canister_Display() {
     canister.textContent = `FILL ${canister_now}/${canister_max}`;
 }
-
-window.onload = function() {
-    update_Score_Display();
-    update_Energy_Display();
-    update_Canister_Display();
-}
-
-const restore_energy_interval = setInterval(() => {
+function restore_energy_interval() {
     if (energy_now < energy_max) {
         energy_now += 1;
         if (energy_now > energy_max) {
@@ -47,9 +40,8 @@ const restore_energy_interval = setInterval(() => {
         localStorage.setItem('energy_now', energy_now);
         update_Energy_Display();
     }
-}, 1000);
-
-const restore_canister_interval = setInterval(() => {
+}
+function restore_canister_interval() {
     if (canister_now < canister_max) {
         canister_now += 1;
         if (canister_now > canister_max) {
@@ -58,7 +50,15 @@ const restore_canister_interval = setInterval(() => {
         localStorage.setItem('canister_now', canister_now);
         update_Canister_Display();
     }
-}, 3000);
+}
+
+window.onload = function() {
+    update_Score_Display();
+    update_Energy_Display();
+    update_Canister_Display();
+    setInterval(restore_energy_interval, 1000);
+    setInterval(restore_canister_interval, 3000);
+}
 
 function touch() {
     if (energy_now >= lvl_tap_now) {
@@ -76,9 +76,11 @@ function touch() {
 
 coin_touch.addEventListener('touchstart', function() {
     coin_img.src = coin_gif;
+    score_interval = setInterval(touch, 1000);
 });
 coin_touch.addEventListener('touchend', function() {
     coin_img.src = coin_static;
+    clearInterval(score_interval);
 });
 
 fill.addEventListener('click', function() {
