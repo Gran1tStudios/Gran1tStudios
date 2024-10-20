@@ -76,11 +76,9 @@ function touch() {
 
 coin_touch.addEventListener('touchstart', function() {
     coin_img.src = coin_gif;
-    score_interval = setInterval(touch, 1000);
 });
 coin_touch.addEventListener('touchend', function() {
     coin_img.src = coin_static;
-    clearInterval(score_interval);
 });
 
 fill.addEventListener('click', function() {
