@@ -34,7 +34,7 @@ window.onload = function() {
     update_Score_Display();
     update_Energy_Display();
     update_Canister_Display();
-    window.Telegram.WebApp.disableVerticalSwipes()
+    allow_vertical_swipe = false;
 }
 
 const restore_energy_interval = setInterval(() => {
