@@ -2,10 +2,7 @@ const score = document.getElementById('score');
 const energy = document.getElementById('energy');
 const fill = document.getElementById('fill');
 const canister = document.getElementById('canister');
-
 const coin = document.getElementById('coin'); 
-const static_img_src = 'img/coin.png';
-const gif_img_src = 'img/coin.gif';
 
 /* localStorage.clear(); */
 let energy_now = Number(localStorage.getItem('energy_now')) || 0;
@@ -72,11 +69,11 @@ function touch() {
 };
 
 coin.addEventListener('touchstart', function() {
-    coin.src = gif_img_src;
+    coin.classList.add('active');
     score_interval = setInterval(touch, 1000);
 });
 coin.addEventListener('touchend', function() {
-    coin.src = static_img_src;
+    coin.classList.remove('active');
     clearInterval(score_interval);
 });
 

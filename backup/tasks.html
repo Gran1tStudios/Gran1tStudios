@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+		<title>NotGlitch</title>
+		<meta content="" name="description">
+		<meta content="" name="keywords">
+		<link href="img/coin.png" rel="icon">
+		<link href="img/coin.png" rel="apple-touch-icon">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="background-coin"></div>
+		<div class="mobile">
+
+			<div class="container">
+				<div class="tasks">
+					<div class="title">
+						TASKS
+					</div>
+					<div class="content">
+						<div class="block">
+							<img src="img/guide.png">
+							<span>GUIDE</span>
+						</div>
+						<button class="block" onclick="window.dialog.showModal();">
+							<img src="img/reff.png"><span>256</span>
+						</button>
+						<div class="block">
+							<div class="mainblock">
+								<div class="bimg"><div class="tg"></div></div>
+								<div class="bimg"><div class="x"></div></div>
+								<div class="bimg"><div class="lock1"></div></div>
+								<div class="bimg"><div class="lock2"></div></div>
+							</div>
+							<button class="social" onclick="window.dialog3.showModal();">SOCIAL</button>
+						</div>
+						<div class="block">
+						<div class="login">LOG-IN STREAK:</div><div class="dayscore">7</div>
+						<div class="week1">
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"></div>
+						</div>
+						<div class="week2">
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"><img src="img/coin.png"></div>
+							<div class="days"></div>
+						</div>
+						</div>
+						<div class="block"><img src="img/coin.gif"></div>
+						<div class="block"><img src="img/coin.gif"></div>
+						<button class="block" onclick="window.dialog2.showModal();"><span>MINE NOTG</span>
+						<div class="mine1"><span>0/1000</span></div>
+						<div class="mine2"><span>0/5000</span></div>
+						<div class="mine2"><span>0/25000</span></div>
+						</button>
+						<div class="block"><img src="img/coin.gif"></div>
+						<div class="block"><img src="img/coin.gif"></div>
+						<div class="block"><img src="img/coin.gif"></div>
+						<div class="block"><img src="img/coin.gif"></div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="footer_buttons">
+					<div class="btn_frens">
+						<a href="./frens.html">FRENS</a></ins>
+					</div>
+					<div class="btn_mine">
+						<a href="./index.html">MINE</a>
+					</div>
+					<div class="btn_tasks">
+						<ins><a href="./tasks.html">EARN</a></ins>
+					</div>
+				</div>
+			</footer>
+			<dialog id="dialog">
+				<div class="title_frens_tasks">
+				  <img src="img/reff.png">
+				  <div class="title">FRIENDS TASKS</div>
+				</div>
+				<div class="paragraph">
+				  <div class="paragraph_title">Invite 2 friends: 1/2</div>
+				  <div class="white_line">
+					<div class="red_line" style="width: 50%"></div>
+				  </div>
+				  <div class="paragraph_button">10000 NOTG</div>
+				</div>
+				<div class="paragraph">
+				  <div class="paragraph_title">Invite 6 friends: 1/6</div>
+				  <div class="white_line">
+					<div class="red_line" style="width: calc(100% * (1 / 6))"></div>
+				  </div>
+				  <div class="paragraph_button">10000 NOTG</div>
+				</div>
+				<div class="paragraph">
+				  <div class="paragraph_title">Invite 10 friends: 1/10</div>
+				  <div class="white_line">
+					<div class="red_line" style="width: calc(100% * (1 / 10))"></div>
+				  </div>
+				  <div class="paragraph_button">10000 NOTG</div>
+				</div>
+				<div class="paragraph">
+				  <div class="paragraph_title">Invite 25 friends: 1/25</div>
+				  <div class="white_line">
+					<div class="red_line" style="width: calc(100% * (1 / 25))"></div>
+				  </div>
+				  <div class="paragraph_button">10000 NOTG</div>
+				</div>
+				<div class="invite"><div class="link">FRIENDS SYSTEM INFO</div></div>
+				<button onclick="window.dialog.close();" aria-label="close" class="close_btn">❌</button>
+			  </dialog>
+			  <dialog id="dialog2">
+				<div class="title_frens_tasks">
+				  <div class="title">MINE NOTG</div>
+				</div>
+				<div class="paragraph">
+				  <div class="paragraph_title">Mine 5000 NOTG: 5555/5000</div>
+				  <div class="white_line">
+					<div class="red_line" style="width: 50%"></div>
+				  </div>
+				  <div class="paragraph_button">10000 NOTG</div>
+				</div>
+				<div class="paragraph">
+				  <div class="paragraph_title">Mine 10000 NOTG: 5555/10000</div>
+				  <div class="white_line">
+					<div class="red_line" style="width: calc(100% * (1 / 6))"></div>
+				  </div>
+				  <div class="paragraph_button">10000 NOTG</div>
+				</div>
+				<div class="paragraph">
+				  <div class="paragraph_title">Mine 25000 NOTG: 5555/25000</div>
+				  <div class="white_line">
+					<div class="red_line" style="width: calc(100% * (1 / 10))"></div>
+				  </div>
+				  <div class="paragraph_button">10000 NOTG</div>
+				</div>
+				<button onclick="window.dialog2.close();" aria-label="close" class="close_btn">❌</button>
+			  </dialog>
+
+			  <dialog id="dialog3">
+				<button onclick="window.dialog3.close();" aria-label="close" class="close_btn">❌</button>
+			  </dialog>
+			<script src="js/main.js"></script>
+		</div>
+	<script src="https://telegram.org/js/telegram-web-app.js" onload="window.Telegram.WebApp.expand()" type="text/javascript"></script>
+	</body>
+</html>
