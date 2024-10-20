@@ -140,6 +140,7 @@ footer .footer_buttons .btn_tasks.active {
 	justify-content: center;
 	margin: 0;
 	cursor: pointer;
+	position: relative;
 }
 .coin .coin_img {
 	display: block;
@@ -152,18 +153,20 @@ footer .footer_buttons .btn_tasks.active {
 	border: none;
 	background-color: none;
 	border-radius: 50%;
-	background-image: url("../img/coin.png");
-	background-position: center;
-	background-size: 100%;
-	background-repeat: no-repeat;
-
 }
-.coin .coin_img.active {
-	background-image: url("../img/coin.gif");
+.coin .coin_touch {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 350px;
+	width: 350px;
+	max-width: 430px;
+	max-height: 430px;
+	border: none;
+	border-radius: 50%;
+	background: none;
+	position: absolute;
 }
-
-
-
 
 
 .indicators {
