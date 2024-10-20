@@ -72,14 +72,14 @@ function touch() {
     }
 };
 
-coin_touch.addEventListener('touchstart', function() {
+coin_touch.addEventListener("touchstart", () => {
     coin_img.src = coin_gif;
     score_interval = setInterval(touch, 1000);
-});
-coin_touch.addEventListener('touchend', function() {
+}, { capture: true, passive: true });
+coin_touch.addEventListener("touchend", () => {
     coin_img.src = coin_static;
     clearInterval(score_interval);
-});
+}, { capture: true, passive: true });
 
 fill.addEventListener('click', function() {
     if (canister_now > 0) {
