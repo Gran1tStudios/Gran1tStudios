@@ -10,7 +10,8 @@ const coin_gif = 'img/coin.gif';
 
 /* localStorage.clear(); */
 let energy_now = Number(localStorage.getItem('energy_now')) || 0;
-let lvl_tap_now = Number(localStorage.getItem('lvl_now')) || 5;
+let lvl_energy_boost = Number(localStorage.getItem('canister_now')) || 1;
+let lvl_tap_boost = Number(localStorage.getItem('lvl_now')) || 1;
 let score_now = Number(localStorage.getItem('score_now')) || 0;
 let canister_now = Number(localStorage.getItem('canister_now')) || 3;
 
@@ -59,9 +60,9 @@ window.onload = function() {
 }
 
 function touch() {
-    if (energy_now >= lvl_tap_now) {
-        energy_now -= lvl_tap_now;
-        score_now += lvl_tap_now;
+    if (energy_now >= lvl_tap_boost) {
+        energy_now -= lvl_tap_boost;
+        score_now += lvl_tap_boost;
         localStorage.setItem('score_now', score_now);
         localStorage.setItem('energy_now', energy_now);
         update_Score_Display();
@@ -72,16 +73,14 @@ function touch() {
     }
 };
 
-if (coin_touch) {
-    coin_touch.addEventListener('touchstart', function() {
-        coin_img.src = coin_gif;
-        score_interval = setInterval(touch, 1000);
-    });
-    coin_touch.addEventListener('touchend', function() {
-        coin_img.src = coin_static;
-        clearInterval(score_interval);
-    });
-}
+coin_touch.addEventListener('touchstart', function() {
+    coin_img.src = coin_gif;
+    score_interval = setInterval(touch, 1000);
+});
+coin_touch.addEventListener('touchend', function() {
+    coin_img.src = coin_static;
+    clearInterval(score_interval);
+});
 
 fill.addEventListener('click', function() {
     if (canister_now > 0) {
