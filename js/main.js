@@ -58,28 +58,6 @@ window.onload = function() {
     setInterval(restore_canister_interval, 3000);
 }
 
-function touch() {
-    if (energy_now >= lvl_tap_now) {
-        energy_now -= lvl_tap_now;
-        score_now += lvl_tap_now;
-        localStorage.setItem('score_now', score_now);
-        localStorage.setItem('energy_now', energy_now);
-        update_Score_Display();
-        update_Energy_Display();
-    }
-    if (energy <= 0) {
-
-    }
-};
-
-coin_touch.addEventListener("touchstart", () => {
-    coin_img.src = coin_gif;
-    score_interval = setInterval(touch, 1000);
-}, { capture: true, passive: true });
-coin_touch.addEventListener("touchend", () => {
-    coin_img.src = coin_static;
-    clearInterval(score_interval);
-}, { capture: true, passive: true });
 
 fill.addEventListener('click', function() {
     if (canister_now > 0) {
