@@ -5,10 +5,8 @@ const canister = document.getElementById('canister');
 
 const coin_touch = document.getElementById('coin_touch');
 const coin_img = document.getElementById('coin_img');
-const coin_img_links = [
-    'img/coin.png',
-    'img/coin.gif'
-];
+const coin_static = 'img/coin.png';
+const coin_gif = 'img/coin.gif';
 
 /* localStorage.clear(); */
 let energy_now = Number(localStorage.getItem('energy_now')) || 0;
@@ -75,11 +73,11 @@ function touch() {
 };
 
 coin_touch.addEventListener('touchstart', function() {
-    coin_img.src = coin_img_links[1];
+    coin_img.src = coin_gif;
     score_interval = setInterval(touch, 1000);
 });
 coin_touch.addEventListener('touchend', function() {
-    coin_img.src = coin_img_links[0];
+    coin_img.src = coin_static;
     clearInterval(score_interval);
 });
 
