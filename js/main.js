@@ -1,5 +1,3 @@
-window.Telegram.WebApp.disableVerticalSwipes();
-
 const score = document.getElementById('score');
 const energy = document.getElementById('energy');
 const fill = document.getElementById('fill');
