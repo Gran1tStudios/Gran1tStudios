@@ -18,8 +18,6 @@ const energy_max = 1000;
 const canister_max = 3;
 const lvl_tap_max = 6;
 
-let score_interval;
-
 function update_Score_Display() {
     score.textContent = `${score_now}`;
 }
@@ -74,11 +72,12 @@ function touch() {
 
 coin_touch.addEventListener("touchstart", () => {
     coin_img.src = coin_gif;
-    setInterval(touch, 1000);
+    score_interval = setInterval(touch, 1000);
 }, { capture: true, passive: true });
 
 coin_touch.addEventListener("touchend", () => {
     coin_img.src = coin_static;
+    clearInterval(score_interval);
 }, { capture: true, passive: true });
 
 fill.addEventListener('click', function() {
