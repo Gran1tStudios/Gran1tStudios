@@ -1,3 +1,5 @@
+window.Telegram.WebApp.disableVerticalSwipes();
+
 const score = document.getElementById('score');
 const energy = document.getElementById('energy');
 const fill = document.getElementById('fill');
@@ -34,7 +36,6 @@ window.onload = function() {
     update_Score_Display();
     update_Energy_Display();
     update_Canister_Display();
-    allow_vertical_swipe = false;
 }
 
 const restore_energy_interval = setInterval(() => {
