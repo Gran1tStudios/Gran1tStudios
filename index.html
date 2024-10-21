@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>GhostTown</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+        <meta content="GhostTown - Tap Game" name="description" />
+        <meta content="Tetr1s" name="author" />
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        
+        <script>
+            document.addEventListener('readystatechange', function(e) {
+                if(document.readyState === "loading"){}
+                else if(document.readyState === "interactive"){}
+                else{
+                    setTimeout(function() {
+                        const preloader = document.querySelector('.preloader');
+                        preloader.classList.add("loaded");
+                    }, 500);
+                }
+            });
+        </script>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    </head>
+    <body>
+        <div class="preloader">
+            <div class="preloader_gradient">Загружаю</div>
+        </div>
+        <div class="background">
+            <div class="background_gradient"></div>
+        </div>
+        
+        <div class="container">
+            <!-- HEADER -->
+            <header>
+                GhostTown
+            </header>
+
+            <!-- MAIN -->
+            <section>
+                <div class="balance_panel">
+                    <div class="balance">
+                        Balance: 6245
+                    </div>
+                    <div class="wallet">
+                        <div class="wallet_img">
+                        </div>
+                        <span><!--Wallet-->UQCn...AKC2</span>
+                    </div>
+                </div>
+                <div class="tap"></div>
+            </section>
+
+            <!-- TASKS -->
+            <section class="active">
+                <div class="content">
+                    <div class="title">
+                        TASKS
+                    </div>
+
+                    <div class="tasks_list">
+                        <div class="paragraph">
+                            <img src="img/TG.png">
+                            <div class="task_title">
+                                Join our TG channel<br>
+                                <span>+0.25</span>
+                            </div>
+                            <div class="task_check">✅</div>
+                        </div>
+                        <div class="paragraph">
+                            <img src="img/TG.png">
+                            <div class="task_title">
+                                Join our TG chat<br>
+                                <span>+0.25</span>
+                            </div>
+                            <div class="task_check">✅</div>
+                        </div>
+                        <div class="paragraph">
+                            <img src="img/fren1.png">
+                            <div class="task_title">
+                                Invite 1 friend<br>
+                                <span>+0.27</span>
+                            </div>
+                            <div class="task_check">✅</div>
+                        </div>
+                        <div class="paragraph">
+                            <img src="img/fren3.png">
+                            <div class="task_title">
+                                Invite 3 friends<br>
+                                <span>+0.9</span>
+                            </div>
+                            <div class="task_check">✅</div>
+                        </div>
+                        <div class="paragraph">
+                            <img src="img/fren5.png">
+                            <div class="task_title">
+                                Invite 5 friends<br>
+                                <span>+1.6</span>
+                            </div>
+                            <div class="task_check">✅</div>
+                        </div>
+                        <div class="paragraph">
+                            <img src="img/fren10.png">
+                            <div class="task_title">
+                                Invite 10 friends<br>
+                                <span>+3.5</span>
+                            </div>
+                            <div class="task_check">✅</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FRIANDS -->
+            <section>
+                <div class="content content_frens">
+                    <div class="title">
+                        FRIENDS
+                    </div>
+                    <div class="frens_info">
+                        <div class="invite_info">
+                            <span>Invite your friends</span><br>
+                            get 10% of their earnings
+                        </div>
+                        <div class="invite_btn">
+                            Get link
+                        </div>
+                    </div>
+
+                    <div class="claim">
+                        <div class="claim_info">
+                            Earned: 6879
+                        </div>
+                        <div class="claim_btn">
+                            Claim
+                        </div>
+                    </div>
+                    
+                    <div class="frens_list">
+                        <div class="frens_total">Friends invited: 14</div>
+                        <div class="frens_list_block">
+                            <div class="paragraph"><div class="number">1</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">2</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">3</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">4</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">5</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">6</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">7</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">8</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">9</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">10</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">11</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">12</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">13</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">14</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">15</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">16</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">17</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">18</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">19</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                            <div class="paragraph"><div class="number">100</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOP -->
+            <section>
+                <div class="content">
+                    <div class="title">
+                        TOP 100
+                    </div>
+
+                    <div class="top_btns">
+                        <div class="top_btn active">Day</div>
+                        <div class="top_btn">Week</div>
+                        <div class="top_btn">Month</div>
+                    </div>
+
+                    <div class="top_list active">
+                        <div class="paragraph"><div class="number">1</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">2</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">3</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">4</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">5</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">6</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">7</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">8</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">9</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">10</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">11</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">12</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">13</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">14</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">15</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">16</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">17</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">18</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">19</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">100</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+
+                    </div>
+
+                    <div class="top_list">
+                        <div class="paragraph"><div class="number">1</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">16598</div></div>
+                        <div class="paragraph"><div class="number">2</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">3</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">4</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">5</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">6</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">7</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">8</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">9</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">10</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">11</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">12</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">13</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">14</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">15</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">16</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">17</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">18</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">19</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">100</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        
+                    </div>
+
+                    <div class="top_list">
+                        <div class="paragraph"><div class="number">1</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">189563</div></div>
+                        <div class="paragraph"><div class="number">2</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">3</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">4</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">5</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">6</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">7</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">8</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">9</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">10</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">11</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">12</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">13</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">14</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">15</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">16</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">17</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">18</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">19</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        <div class="paragraph"><div class="number">100</div><img src="img/avatar.jpg"><div class="name">Abobovich_aboba_abobov</div><div class="quantity">6245</div></div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                <div class="f_btn">TOWN</div>
+                <div class="f_btn active">TASKS</div>
+                <div class="f_btn">FRENS</div>
+                <div class="f_btn">TOP</div>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
