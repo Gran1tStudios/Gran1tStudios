@@ -20,6 +20,7 @@ const canister_max = 3;
 const lvl_tap_max = 6;
 
 let score_interval;
+let is_touching = false;
 
 function update_Score_Display() {
     score.textContent = `${score_now}`;
@@ -55,8 +56,8 @@ window.onload = function() {
     update_Score_Display();
     update_Energy_Display();
     update_Canister_Display();
-    setInterval(restore_energy_interval, 1000);
-    setInterval(restore_canister_interval, 3000);
+    setInterval(restore_energy_interval, 1000); 
+    setInterval(restore_canister_interval, 3600000); /* 1 час восстанавливается 1 канистра */
 }
 
 function touch() {
@@ -74,10 +75,14 @@ function touch() {
 };
 
 coin_touch.addEventListener('touchstart', function() {
-    coin_img.src = coin_gif;
-    score_interval = setInterval(touch, 1000);
+    if (!is_touching) {
+        is_touching = true;
+        coin_img.src = coin_gif;
+        score_interval = setInterval(touch, 1000);
+    }
 });
 coin_touch.addEventListener('touchend', function() {
+    is_touching = false;
     coin_img.src = coin_static;
     clearInterval(score_interval);
 });
